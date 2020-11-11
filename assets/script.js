@@ -1,4 +1,7 @@
 // Get current hour of the day moment.js
+var time = moment().format("MMM Do YYYY"); 
+$("#currentDay").append(time)
+// console.log(time)
 
 // for loop over the hours of the day from 9am to i <= 17
 
@@ -14,7 +17,7 @@
 
 // option b: select matching element $( element ID ).css("background")
 
-// build matching html to css
+
 
 // add click event on a parent EL that can listen to my save buttons clicks
 
