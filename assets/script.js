@@ -1,18 +1,38 @@
 // Get current hour of the day moment.js
+var time = moment().format("MMM Do YYYY"); 
+$("#currentDay").append(time);
+    
 $(document).ready(function(){
 
     $(".saveBtn").on("click", function(event){
-        var textEl = $(this).siblings(".text").val()
-        console.log(textEl)
-        var timeId =  $(this).siblings(".text").attr("id")
+        var textBox = $(this).siblings(".textEl").val()
+        // console.log(textEl)
+        var timeId =  $(this).siblings(".textEl").attr("id")
         //console.log(timeId)
-        localStorage.setItem(timeId, textEl)
-        // console.log(this)
+        localStorage.setItem(timeId, textBox);
     })
+    
+    localStorage.getItem(timeId);
+    console.log(timeId)
+    console.log(localStorage.getItem(timeId))
 
-    var time = moment().format("MMM Do YYYY"); 
-    $("#currentDay").append(time);
+
+var clearButton = $("#button")
+
+function buttonClear(){
+    localStorage.clear();
+    location.reload();
+}
+
+//create button event to call the clearing of local storage 
+$(clearButton).on("click",buttonClear)
 })
+
+
+
+
+
+
 
 
 // for loop over the hours of the day from 9am to i <= 17
@@ -29,8 +49,3 @@ $(document).ready(function(){
 
 // option b: select matching element $( element ID ).css("background")
 
-
-
-// add click event on a parent EL that can listen to my save buttons clicks
-
-// event.target
