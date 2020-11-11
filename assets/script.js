@@ -12,9 +12,18 @@ $(document).ready(function(){
         localStorage.setItem(timeId, textBox);
     })
     
-    localStorage.getItem(timeId);
-    console.log(timeId)
-    console.log(localStorage.getItem(timeId))
+    $("#input9").append(localStorage.getItem("input9"));
+    $("#input10").append(localStorage.getItem("input10"));
+    $("#input11").append(localStorage.getItem("input11"));
+    $("#input12").append(localStorage.getItem("input12"));
+    $("#input1").append(localStorage.getItem("input1"));
+    $("#input2").append(localStorage.getItem("input2"));
+    $("#input3").append(localStorage.getItem("input3"));
+    $("#input4").append(localStorage.getItem("input4"));
+    $("#input5").append(localStorage.getItem("input5"));
+    
+    
+    console.log(localStorage.getItem("input5"))
 
 
 var clearButton = $("#button")
