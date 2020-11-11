@@ -1,7 +1,19 @@
 // Get current hour of the day moment.js
-var time = moment().format("MMM Do YYYY"); 
-$("#currentDay").append(time)
-// console.log(time)
+$(document).ready(function(){
+
+    $(".saveBtn").on("click", function(event){
+        var textEl = $(this).siblings(".text").val()
+        console.log(textEl)
+        var timeId =  $(this).siblings(".text").attr("id")
+        //console.log(timeId)
+        localStorage.setItem(timeId, textEl)
+        // console.log(this)
+    })
+
+    var time = moment().format("MMM Do YYYY"); 
+    $("#currentDay").append(time);
+})
+
 
 // for loop over the hours of the day from 9am to i <= 17
 
