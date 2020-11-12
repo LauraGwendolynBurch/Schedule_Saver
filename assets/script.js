@@ -1,9 +1,23 @@
-// Get current hour of the day moment.js
+// Get current hour of the day moment.js, get current time, append day to page
 var time = moment().format("MMM Do YYYY"); 
+var hour = moment().format("h");
 $("#currentDay").append(time);
-    
+
+//function to wait for page to load to start
 $(document).ready(function(){
 
+    // make an if statement to mark the color of the box based on the hour of the day
+    // var i = 9; in html 
+    // element id add id= "#hour-" + i;
+    // Current checking 9am < current hour (also check less than and equal to)
+    // 9am is in the past
+    // Option a: .is-past, .is-present, .is-future
+    // select matching element $( element ID ).addClass("is-past")
+    // option b: select matching element $( element ID ).css("background")
+
+    if ()
+
+    // click event to save and store text 
     $(".saveBtn").on("click", function(event){
         var textBox = $(this).siblings(".textEl").val()
         // console.log(textEl)
@@ -12,6 +26,7 @@ $(document).ready(function(){
         localStorage.setItem(timeId, textBox);
     })
     
+    //appending the text to assigned row once browser page is refreshed 
     $("#input9").append(localStorage.getItem("input9"));
     $("#input10").append(localStorage.getItem("input10"));
     $("#input11").append(localStorage.getItem("input11"));
@@ -21,11 +36,9 @@ $(document).ready(function(){
     $("#input3").append(localStorage.getItem("input3"));
     $("#input4").append(localStorage.getItem("input4"));
     $("#input5").append(localStorage.getItem("input5"));
-    
-    
-    console.log(localStorage.getItem("input5"))
+    // console.log(localStorage.getItem("input5"))
 
-
+// button made to clear all local storage and text content 
 var clearButton = $("#button")
 
 function buttonClear(){
@@ -44,17 +57,8 @@ $(clearButton).on("click",buttonClear)
 
 
 
-// for loop over the hours of the day from 9am to i <= 17
 
-//for loop get one place to another (aka start and stop)
 
-//       var i = 9; in html 
-//       element id add id= "#hour-" + i;
-//       Current checking 9am < current hour (also check less than and equal to)
-//       9am is in the past
 
-// Option a: .is-past, .is-present, .is-future
-//  select matching element $( element ID ).addClass("is-past")
 
-// option b: select matching element $( element ID ).css("background")
 
