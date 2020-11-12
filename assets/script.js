@@ -1,21 +1,30 @@
 // Get current hour of the day moment.js, get current time, append day to page
-var time = moment().format("MMM Do YYYY"); 
-var hour = moment().format("h");
-$("#currentDay").append(time);
-
+// console.log(hour)
 //function to wait for page to load to start
 $(document).ready(function(){
+    
+    var time = moment().format("MMM Do YYYY"); 
+    var hour = moment().format("h");
+    $("#currentDay").append(time);
+    var color = $(".textEl")
+    // console.log(color)
+   
+ for(var i = 0; i < color.length; i++){
+    // console.log(color[i])
+    var inputHr = $(color[i]).attr("data-set")
+    var currentInput = $(color[i])
 
-    // make an if statement to mark the color of the box based on the hour of the day
-    // var i = 9; in html 
-    // element id add id= "#hour-" + i;
-    // Current checking 9am < current hour (also check less than and equal to)
-    // 9am is in the past
-    // Option a: .is-past, .is-present, .is-future
-    // select matching element $( element ID ).addClass("is-past")
-    // option b: select matching element $( element ID ).css("background")
+    if (hour === inputHr){
+        currentInput.addClass("present");
+    }
+    if (hour > inputHr){
+        currentInput.addClass("past")
+    }
+    if (hour < inputHr){
+        currentInput.addClass("future")
+    }
+ }
 
-    if ()
 
     // click event to save and store text 
     $(".saveBtn").on("click", function(event){
