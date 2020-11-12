@@ -7,19 +7,18 @@ Have a busy day?  Use this application to help you manage your time more effecti
 [Schedule_Saver](https://lauragwendolynburch.github.io/Schedule_Saver/)
 
 ## Sample of Project 
-![ Image of Project ](./images/)
 
-![ Image of Project ](./images/)
+![ Image of Project ](./images/photo.png)
 
-![ Image of Project ](./images/)
+![ Image of Project ](./images/05-third-party-apis-homework-demo.gif)
 
 ## Sample of JavaScript
-![ Image of Sample Code ](./images/)
+![ Image of Sample Code ](./images/code1.png)
 
-![ Image of Sample Code ](./images/)
+![ Image of Sample Code ](./images/code2.png)
 
 ## User Notes
-Still working on the loop to get the colors to change.  This was a nice way to work with new a new api. jQuery is a bit easier to work with than vanilla JS.  
+This was a nice way to work with new a new api. jQuery is a bit easier to work with than vanilla JS.  
 
 ## License
 N/A
