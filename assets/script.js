@@ -17,10 +17,10 @@ $(document).ready(function(){
     if (hour === inputHr){
         currentInput.addClass("present");
     }
-    if (hour > inputHr){
+    if (hour < inputHr){
         currentInput.addClass("past")
     }
-    if (hour < inputHr){
+    if (hour > inputHr){
         currentInput.addClass("future")
     }
  }
